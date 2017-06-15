@@ -1,28 +1,29 @@
-﻿local function callback_reply(extra, success, result)
+
+local function callback_reply(extra, success, result)
 	--icon & rank ------------------------------------------------------------------------------------------------
 	userrank = "Member"
 	if tonumber(result.from.id) == 219201071 then
 		userrank = "Master ⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/master.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_sudo(result) then
 		userrank = "Sudo ⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/sudo.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_admin1(result.from.id) then
 		userrank = "Admin ⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/admin.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_owner(result.from.id, result.to.id) then
 		userrank = "Leader ⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/leader.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_momod(result.from.id, result.to.id) then
 		userrank = "Moderator ⭐"
-		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif tonumber(result.from.id) == tonumber(our_id) then
-		userrank = "Umbrella-Cp ⭐⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
+		userrank = "TeleDiamond-Cp ⭐⭐⭐⭐⭐⭐"
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
 			userrank = "API Bot"
-			send_document(org_chat_id,"umbrella/stickers/apt.webp", ok_cb, false)
+			send_document(org_chat_id,"", ok_cb, false)
 		end
 	end
 	--custom rank ------------------------------------------------------------------------------------------------
@@ -175,28 +176,28 @@ local function callback_res(extra, success, result)
 		return send_large_msg(org_chat_id, "usename not available")
 	end
 	--icon & rank ------------------------------------------------------------------------------------------------
-	if tonumber(result.id) == 122774063 then
+	if tonumber(result.id) == 219201071 then
 		userrank = "Master ⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/master.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_sudo(result) then
 		userrank = "Sudo ⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/sudo.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_admin1(result.id) then
 		userrank = "Admin ⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/admin.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_owner(result.id, extra.chat2) then
 		userrank = "Leader ⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/leader.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_momod(result.id, extra.chat2) then
 		userrank = "Moderator ⭐"
-		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif tonumber(result.id) == tonumber(our_id) then
 		userrank = "special-cp ⭐⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
 			userrank = "API Bot"
-			send_document(org_chat_id,"umbrella/stickers/api.webp", ok_cb, false)
+			send_document(org_chat_id,"", ok_cb, false)
 	else
 		userrank = "Member"
 	end
@@ -275,28 +276,28 @@ local function callback_info(extra, success, result)
 		return send_large_msg(org_chat_id, "آی دی وارد شده اشتباه است")
 	end
 	--icon & rank ------------------------------------------------------------------------------------------------
-	if tonumber(result.id) == 122774063 then
+	if tonumber(result.id) == 219201071 then
 		userrank = "Master ⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/master.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_sudo(result) then
 		userrank = "Sudo ⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/sudo.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_admin1(result.id) then
 		userrank = "Admin ⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/admin.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_owner(result.id, extra.chat2) then
 		userrank = "Leader ⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/leader.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif is_momod(result.id, extra.chat2) then
 		userrank = "Moderator ⭐"
-		send_document(org_chat_id,"umbrella/stickers/mod.webp", ok_cb, false)
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif tonumber(result.id) == tonumber(our_id) then
-		userrank = "Umbrella-Cp ⭐⭐⭐⭐⭐⭐"
-		send_document(org_chat_id,"umbrella/stickers/umb.webp", ok_cb, false)
+		userrank = "TeleDiamond-Cp ⭐⭐⭐⭐⭐⭐"
+		send_document(org_chat_id,"", ok_cb, false)
 	elseif result.from.username then
 		if string.sub(result.from.username:lower(), -3) == "bot" then
 			userrank = "API Bot"
-			send_document(org_chat_id,"umbrella/stickers/api.webp", ok_cb, false)
+			send_document(org_chat_id,"", ok_cb, false)
 	else
 		userrank = "Member"
 	end
@@ -442,21 +443,21 @@ local function run(msg, matches)
 			local um_hash = 'msgs:'..msg.from.id..':'..msg.to.id
 			user_info.msgs = tonumber(redis:get(um_hash) or 0)
 			--icon & rank ------------------------------------------------------------------------------------------------
-			if tonumber(msg.from.id) == 122774063 then
+			if tonumber(msg.from.id) == 219201071 then
 				userrank = "Master ⭐⭐⭐⭐"
-				send_document("chat#id"..msg.to.id,"umbrella/stickers/master.webp", ok_cb, false)
+				send_document("chat#id"..msg.to.id,"", ok_cb, false)
 			elseif is_sudo(msg) then
 				userrank = "Sudo ⭐⭐⭐⭐⭐"
-				send_document("chat#id"..msg.to.id,"umbrella/stickers/sudo.webp", ok_cb, false)
+				send_document("chat#id"..msg.to.id,"", ok_cb, false)
 			elseif is_admin1(msg) then
 				userrank = "Admin ⭐⭐⭐"
-				send_document("chat#id"..msg.to.id,"umbrella/stickers/admin.webp", ok_cb, false)
+				send_document("chat#id"..msg.to.id,"", ok_cb, false)
 			elseif is_owner(msg) then
 				userrank = "Leader ⭐⭐"
-				send_document("chat#id"..msg.to.id,"umbrella/stickers/leader.webp", ok_cb, false)
+				send_document("chat#id"..msg.to.id,"", ok_cb, false)
 			elseif is_momod(msg) then
 				userrank = "Moderator ⭐"
-				send_document("chat#id"..msg.to.id,"umbrella/stickers/mod.webp", ok_cb, false)
+				send_document("chat#id"..msg.to.id,"", ok_cb, false)
 			else
 				userrank = "Member"
 			end
@@ -486,16 +487,16 @@ local function run(msg, matches)
 				number = "-----"
 			end
 			--info ------------------------------------------------------------------------------------------------
-			local info = "نام کامل: "..string.gsub(msg.from.print_name, "_", " ").."\n"
-					.."نام کوچک: "..(msg.from.first_name or "-----").."\n"
-					.."نام خانوادگی: "..(msg.from.last_name or "-----").."\n\n"
+			local info = "نام: "..string.gsub(msg.from.print_name, "_", " ").."\n➖➖➖➖➖➖➖➖➖➖➖➖\n"
+					..""
+					..""
 					.."شماره موبایل: "..number.."\n"
-					.."یوزرنیم: @"..(msg.from.username or "-----").."\n"
-					.."آی دی: "..msg.from.id.."\n\n"
-					.."مقام: "..usertype.."\n"
-					.."جایگاه: "..userrank.."\n\n"
-					.."رابط کاربری: "..hardware.."\n"
-					.."تعداد پیامها: "..user_info.msgs.."\n\n"
+					.."➖➖➖➖➖➖➖➖➖➖➖➖\nیوزرنیم: @"..(msg.from.username or "-----").."\nلینک شما: http://telegram.me/"..msg.from.username.."\n"
+					.."آی دی: "..msg.from.id.."\n➖➖➖➖➖➖➖➖➖➖➖➖\n"
+					..""
+					.."جایگاه: "..userrank.."\n➖➖➖➖➖➖➖➖➖➖➖➖\n"
+					..""
+					.."تعداد پیامها: "..user_info.msgs.."\n➖➖➖➖➖➖➖➖➖➖➖➖\n"
 					.."نام گروه: "..string.gsub(msg.to.print_name, "_", " ").."\n"
 					.."آی دی گروه: "..msg.to.id
 			return info
@@ -506,20 +507,7 @@ local function run(msg, matches)
 end
 
 return {
-	description = "User Infomation",
-	usagehtm = '<tr><td align="center">info</td><td align="right">اطلاعات کاملی را راجبه شما، گروهی که در آن هستید و مقامتان میدهد همچنین با رپلی کردن میتوانید اطلاعات فرد مورد نظر را نیز ببینید</td></tr>'
-	..'<tr><td align="center">/info مقام آیدی</td><td align="right">اعطای مقام به شخص به جر مقامهای اصلی</td></tr>'
-	..'<tr><td align="center">/infodel آیدی</td><td align="right">حذف مقام اعطا شده</td></tr>',
-	usage = {
-		user = {
-			"info: اطلاعات شما",
-			"info (reply): اطلاعات دیگران",
-			},
-		sudo = {
-			"/info (id) (txt) : اعطای مقام",
-			"/infodel : حذف مقام",
-			},
-		},
+
 	patterns = {
 		"^[!#/](infodel) (.*)$",
 		"^[!#/](info) ([^%s]+) (.*)$",
