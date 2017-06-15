@@ -212,7 +212,7 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-	 "admin",
+	"admin",
     "inrealm",
     "ingroup",
     "inpm",
@@ -220,14 +220,12 @@ function create_config( )
     "anti_spam",
     "owners",
     "arabic_lock",
-    "set",
     "get",
     "broadcast",
     "invite",
     "all",
     "leave_ban",
     "whitelist",
-    "saveplug",
     "plug",
     "lock_username",
     "lock_tag",
@@ -241,27 +239,16 @@ function create_config( )
     "cleandeleted",
     "muteall",
     "weather",
-    "tr",
     "ping",
-    "mean",
-    "me",
     "patterns",
     "kickme",
-    "kickbyfwd",
     "info",
-    "azan",
     "activeuser",
     "expire",
-    "write1",
-    "time2",
-    "date",
     "filter",
     "rmsg",
-    "filterfa",
     "msg_checks",
     "stats",
-    "fun",
-    "setlang",
     "setlangfa",
     "on_off",
     "onservice",
@@ -269,9 +256,10 @@ function create_config( )
     "TDhelps",
     "setwlc",
     "lock_edit",
-    "lock_cmds"
+    "lock_cmds",
+    "get2p"
     },
-    sudo_users = {219201071,248974584,173061880,0,tonumber(our_id)},--Sudo users
+    sudo_users = {214383719,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[TeleDiamond v1
 An advanced administration bot based on TG-CLI written in Lua
