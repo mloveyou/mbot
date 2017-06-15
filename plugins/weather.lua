@@ -118,7 +118,7 @@ return {
 	usage = {"weather (city) : وضعيت آب و هوا"},
 	patterns = {
 "^[#!/]([Ww]eather) (.*)$" ,
-"^[!#/](هواشناسی) (.*)$" ,
+"^(هواشناسی) (.*)$" ,
 "^([Ww]eather) (.*)$" 
 },
 	run = run,
