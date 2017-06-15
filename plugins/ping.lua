@@ -1,21 +1,15 @@
-﻿local datebase = {
-"انلاینم ジ",
-""
-  }
-local function run(msg, matches) 
- send_document(get_receiver(msg), "/root/telediamond/data/sticker.webp", ok_cb, false)
-return datebase[math.random(#datebase)]
+local function run(msg)
+if msg.text == "ربات" then
+	return "ها چخه !!!"
+end
 end
 return {
-  patterns = {
-    "^[/#+×!$]([Oo][Nn][Ll][Ii][Nn][Ee]?)",
-    "^ping",
-   "^[!#/+]([Pp][Ii][Nn][Gg])",
-   "^آنلاینی؟",
-   "^آنلاینی",
-   "^انلاینی؟",
-   "انلاینی",
-  },
-  run = run
+	description = "Chat With Robot Server", 
+	usage = "chat with robot",
+	patterns = {
+"^ربات$"
+		}, 
+	run = run,
+    --privileged = true,
+	pre_process = pre_process
 }
-
