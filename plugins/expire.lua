@@ -54,7 +54,7 @@ end
 return msg
 end
 function run(msg, matches)
-	if matches[1]:lower() == 'setexpire' then
+	if matches[1]:lower() == 'تنظیم عتبار' then
 		if not is_sudo(msg) then return end
 		local time = os.time()
 		local buytime = tonumber(os.time())
@@ -62,7 +62,7 @@ function run(msg, matches)
 		redis:hset('expiretime',get_receiver(msg),timeexpire)
 		return "تاریخ انقضای گروه:\nبه "..matches[2].. " روز دیگر تنظیم شد."
 	end
-	if matches[1]:lower() == 'expire' then
+	if matches[1]:lower() == 'عتبار' then
 		local expiretime = redis:hget ('expiretime', get_receiver(msg))
 		if not expiretime then return 'تاریخ ست نشده است' else
 			local now = tonumber(os.time())
@@ -73,8 +73,8 @@ function run(msg, matches)
 end
 return {
   patterns = {
-    "^[!#/]([Ss]etexpire) (.*)$",
-	"^[!/#]([Ee]xpire)$",
+    "^(تنظیم عتبار) (.*)$",
+	"^عتبار$",
   },
   run = run,
   pre_process = pre_process
