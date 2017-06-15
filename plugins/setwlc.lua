@@ -49,8 +49,8 @@ return group_welcome
 end
 return {
   patterns = {
-  "^[!#/](setwlc) +(.*)$",
-  "^[!#/](delwlc)$",
+  "^(setwlc) +(.*)$",
+  "^(delwlc)$",
   "^!!tgservice (chat_add_user)$",
   "^!!tgservice (channel_invite)$",
   "^!!tgservice (chat_add_user_link)$",
