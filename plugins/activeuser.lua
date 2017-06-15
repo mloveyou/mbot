@@ -291,7 +291,7 @@ return {
   patterns = {
     "^[!/#]msguser$",
     "^[!/#]topuser$",
-    "^[!#/]فعالان گروه$",
+    "^فعالان گروه$",
   }, 
   pre_process = pre_process,
   cron = cron,
